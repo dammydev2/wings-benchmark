@@ -183,6 +183,7 @@ class HomeController extends Controller
 
     public function addpayment(Request $request)
     {
+        // return $request;
         Session::put('order_id', $request['order_id']);
         return redirect('enterpayment');
     }
@@ -1041,10 +1042,11 @@ class HomeController extends Controller
 
     public function editPayment(Request $request)
     {
-        Order::where('id', $request['id'])
+        Order::where('order_id', $request['order_id'])
             ->update([
                 'status' => $request['status']
             ]);
+        Payment::where('order_id', $request['order_id'])->delete();
         return redirect()->back()->with('success', 'payment updated successfully');
     }
 }

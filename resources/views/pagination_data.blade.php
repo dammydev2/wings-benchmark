@@ -36,7 +36,7 @@
 
 						<form action="{{ url('editPayment') }}" method="post">
 							@csrf
-							<input type="hidden" name="id" value="{{ $row->id }}">
+							<input type="hidden" name="order_id" value="{{ $row->order_id }}">
 							<div class="form-group">
 								<label for="">change status</label>
 								<select name="status" id="" class="form-control">
@@ -59,8 +59,8 @@
 		@if($row->status != 'paid')
 		<form method="post" action="addpayment">
 			@csrf
-			<input type="hidden" name="order_id" value="'.$row->order_id .'">
-			<input type="submit" class="btn btn-link" value="add payment" name="">
+			<input type="hidden" name="order_id" value="{{ $row->order_id }}">
+			<input type="submit" onclick="return confirm('Sure to confirm payment?')" class="btn btn-link" value="add payment" name="">
 		</form>
 		@endif
 	</td>

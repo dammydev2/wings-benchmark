@@ -45,14 +45,14 @@
 						</div>
 					</div>
 
-					<div class="form-group">
-						<label>Customer Name</label>
-						<input type="text" name="name" readonly="" value="{{ $row->name }}" class="form-control">
+					<div class="form-group col-lg-6 col-sm-12">
+						<label>Amount</label>
+						<input type="text" name="amount" readonly="" value="{{ $row->amount }}" class="form-control">
 					</div>
 
 					<div class="form-group">
-						<label>Amount</label>
-						<input type="text" name="amount" readonly="" value="{{ $row->amount }}" class="form-control">
+						<label>Customer Name</label>
+						<input type="text" name="name" readonly="" value="{{ $row->name }}" class="form-control">
 					</div>
 
 					<div class="form-group">

@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row">
 
+        @if(\Auth::User()->type == 0)
         <div class="col-md-3 board">
             <i class="fa fa-user"></i><br>
             <span class="text-lg">Total Clients</span><br>
@@ -35,6 +36,7 @@
                 all payment made this month
             </div>
         </div>
+        @endif
 
     </div>
 </div>
@@ -60,7 +62,8 @@
     #parent:hover #hover-content {
         display: block;
     }
-    .space{
+
+    .space {
         height: 30px;
     }
 </style>

@@ -124,6 +124,8 @@ Route::post('/getpayment', 'HomeController@getpayment');
 
 Route::post('/enterworker', 'HomeController@enterworker');
 
+Route::post('/editPayment', 'HomeController@editPayment');
+
 Route::post('/getriderwork', 'HomeController@getriderwork');
 
 Route::get('/riderwork', 'HomeController@riderwork');
@@ -149,5 +151,9 @@ Route::post('/getassign','HomeController@getassign');
 Route::get('/pagination/fetch_data', 'HomeController@fetch_data');
 
 Route::post('/pagination/fetch_data', 'HomeController@fetch_data');
+
+Route::get('/pagination/fetch_data2', 'HomeController@fetch_data2');
+
+Route::post('/pagination/fetch_data2', 'HomeController@fetch_data2');
 
 

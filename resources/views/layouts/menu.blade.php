@@ -23,6 +23,7 @@
 @endif
 
 @if(\Auth::User()->type == 0)
+<li><a href="{{ url('/home') }}">home</a></li>
 <li><a href="{{ url('/order') }}">order</a></li>
 <li><a href="{{ url('/special') }}">special order</a></li>
 <li><a href="{{ url('/salesrider') }}">Rider Report</a></li>
